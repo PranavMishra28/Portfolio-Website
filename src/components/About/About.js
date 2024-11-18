@@ -15,6 +15,7 @@ function About() {
         }`
       )
       .then((data) => {
+        console.log(data)
         setText(data);
         if (data.length === 0) {
           setError(true);

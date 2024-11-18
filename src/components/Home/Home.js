@@ -11,16 +11,12 @@ function Home() {
     client
       .fetch(
         `*[_type == "profile-image"] {
-          image {
-            asset-> {
-              url
-            }
-          }
+          "imageUrl": Image.asset->url
         }`
       )
       .then((data) => {
         if (data.length > 0) {
-          setProfileImage(data[0].image.asset.url);
+          setProfileImage(data[0].imageUrl);
         } else {
           setError(true);
         }
@@ -75,7 +71,7 @@ function Home() {
               onClick={scrollToContact}
               className="mt-5 bg-orange hover:-translate-y-1 font-semibold text-white px-8 py-3 rounded-full hover:bg-orange focus:outline-none focus:ring-2 focus:ring-orange focus:ring-opacity-50 transition duration-150 ease-in-out"
             >
-              Scroll down <i class='text-xs bx bxs-down-arrow'></i>
+              Scroll down <i class="text-xs bx bxs-down-arrow"></i>
             </button>
 
             <div className="mt-6 flex space-x-6 sm:mt-10">
