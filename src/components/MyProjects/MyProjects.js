@@ -83,7 +83,7 @@ function MyProjects() {
                 View more projects on Github!
               </div>
               <a
-                href="https://github.com/krushil1"
+                href="https://github.com/PranavMishra28"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-2"
@@ -100,7 +100,7 @@ function MyProjects() {
               />
             </div>
 
-            {showModal && (
+            {showModal && currentProject && (
               <div className="fixed inset-0 flex items-center justify-center z-50">
                 <div className="fixed inset-0 bg-black opacity-50 backdrop-blur-md"></div>
                 <div className="modal-content shadow-effect bg-white p-10 sm:p-20 rounded-md relative flex flex-col items-center justify-center">
@@ -128,16 +128,13 @@ function MyProjects() {
                     </p>
                     <div className="flex flex-wrap gap-2">
                       <hr className="w-full max-w-lg rounded-full border-gray" />
-                      {currentProject &&
-                        currentProject.Icons_For_Tech_Used.map(
-                          (tech, index) => (
-                            <div
-                              key={index}
-                              className="text-orange text-3xl"
-                              dangerouslySetInnerHTML={{ __html: tech }}
-                            ></div>
-                          )
-                        )}
+                      {Array.isArray(currentProject.Icons_For_Tech_Used) && currentProject.Icons_For_Tech_Used.map((tech, index) => (
+                        <div
+                          key={index}
+                          className="text-orange text-3xl"
+                          dangerouslySetInnerHTML={{ __html: tech }}
+                        ></div>
+                      ))}
                     </div>
 
                     <button

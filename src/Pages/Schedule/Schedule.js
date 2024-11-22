@@ -4,7 +4,7 @@ function Schedule() {
   return (
     <div style={{ height: "800px" }}>
       <iframe
-        src="https://calendly.com/krushilamrutiya/15-mins"
+        src="https://calendly.com/mishrapranav82/15-minute-one-on-one"
         width="100%"
         height="100%"
         frameborder="0"

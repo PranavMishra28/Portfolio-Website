@@ -49,21 +49,25 @@ function Home() {
   }, []);
 
   // Generate alt text based on error state
-  const altText = error ? "Error fetching image" : "Krushil's img";
+  const altText = error ? "Error fetching image" : "Pranav's img";
 
   return (
-    <div className="container mx-auto fade-in" id="home">
+    <div className="container mx-auto fade-in active" id="home">
       <div className="sm:flex justify-center items-center min-h-screen bg-white-100 px-6 md:px-24 py-20">
         <div className="max-w-4xl w-9/12 space-y-12">
           <div className="text-left">
             <h1 className="text-4xl sm:text-6xl text-gray font-bold leading-tight mb-4">
               Hi,
               <br />
-              I'm <span className="text-orange text-shadow">Krushil</span>
+              I'm <span className="text-orange text-shadow">
+                {Array.from("Pranav").map((letter, index) => (
+                  <span key={index}>{letter}</span>
+                ))}
+              </span>
             </h1>
             <div className="flex items-center">
               <p className="text-1xl sm:text-2xl font-medium text-gray">
-                Building & breaking tech
+              Crafting solutions, one bug at a time
               </p>
               <i className="bx bx-code-alt text-gray text-xl ml-2"></i>
             </div>
@@ -76,14 +80,14 @@ function Home() {
 
             <div className="mt-6 flex space-x-6 sm:mt-10">
               <a
-                href="https://www.linkedin.com/in/krushil-amrutiya/"
+                href="https://www.linkedin.com/in/pm28/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <i className="bx bxl-linkedin text-gray text-2xl hover:text-lightgray"></i>
               </a>
               <a
-                href="https://github.com/krushil1"
+                href="https://github.com/PranavMishra28"
                 target="_blank"
                 rel="noreferrer"
               >

@@ -81,7 +81,7 @@ function Contact() {
                   value={formData.name}
                   onChange={handleInputChange}
                   className="shadow-effect bg-gray-50 text-gray text-sm rounded block w-full p-2.5 focus:outline-none focus:ring-2 focus:ring-orange focus:border-orange"
-                  placeholder="Krushil Amrutiya"
+                  placeholder="Pranav Mishra"
                   required
                 />
               </div>
@@ -99,7 +99,7 @@ function Contact() {
                   value={formData.email}
                   onChange={handleInputChange}
                   className="shadow-effect bg-gray-50 text-gray text-sm rounded block w-full p-2.5 focus:outline-none focus:ring-2 focus:ring-orange focus:border-orange"
-                  placeholder="contact@krushil.dev"
+                  placeholder="mishrapranav82@gmail.com" // Change after I buy domain name
                   required
                 />
               </div>
@@ -117,7 +117,7 @@ function Contact() {
                   onChange={handleInputChange}
                   rows="6"
                   className="shadow-effect bg-gray-50 text-gray text-sm rounded block w-full p-2.5 focus:outline-none focus:ring-2 focus:ring-orange focus:border-orange"
-                  placeholder="Drop me a hey...!!!"
+                  placeholder="Drop your message here"
                   required
                 ></textarea>
               </div>

@@ -56,10 +56,10 @@ function About() {
                 className="mt-4 flex items-center shadow-2xl p-2 rounded-md"
                 href="/aviation"
               >
-                <p className="text-xs text-gray font-semibold">
+                {/* <p className="text-xs text-gray font-semibold">
                   View my aviation shots
-                </p>
-                <i className="ml-2 text-3xl bx bxs-plane-take-off text-orange"></i>
+                </p> */}
+                {/* <i className="ml-2 text-3xl bx bxs-plane-take-off text-orange"></i> */}
               </a>
             </div>
           </div>

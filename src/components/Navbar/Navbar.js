@@ -15,7 +15,7 @@ function Navbar() {
           <nav className="flex justify-between items-center">
             <div className="text-lg font-semibold">
               <button className="text-gray text-3xl">
-                Krush<span className="text-orange">i</span>l
+                Pran<span className="text-orange">a</span>v
               </button>
             </div>
             <div className="hidden md:flex space-x-12">

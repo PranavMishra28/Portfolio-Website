@@ -38,14 +38,14 @@ function Expertise() {
           <div className="w-full sm:w-1/2 pr-0 sm:pr-4 mb-8 sm:mb-0">
             <div className="justify-start mb-4 text-gray font-medium">
               <p className="text-sm sm:text-base">
-                Learning one thing at a time.
+              Ctrl + Shift + Inspire | Turning Ideas into Code
               </p>
               <div className="flex flex-col">
                 <p className="text-sm sm:text-base text-gray mt-4 sm:mt-8">
-                  "The biggest asset in the world is your mindset"
+                  "Code is like humor. When you have to explain it, it’s bad"
                 </p>
                 <p className="text-sm sm:text-base font-semibold ml-4">
-                  ~Gary Vaynerchuk
+                  ~Cory House
                 </p>
               </div>
             </div>
