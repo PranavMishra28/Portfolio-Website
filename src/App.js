@@ -1,4 +1,5 @@
 import "./App.css";
+import { Analytics } from "@vercel/analytics/react"
 import {
   BrowserRouter as Router,
   Route,
