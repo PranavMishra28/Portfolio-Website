@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
@@ -9,6 +9,7 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +26,16 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleClick = (nav) => {
+    setActive(nav.title);
+    if (nav.id.startsWith('/')) {
+      navigate(nav.id);
+    } else {
+      const element = document.getElementById(nav.id);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav
       className={`${
@@ -36,17 +47,25 @@ const Navbar = () => {
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
           to='/'
-          className='flex items-center gap-2'
+          className='flex items-center gap-4'
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Adrian &nbsp;
-            <span className='sm:block hidden'> | JavaScript Mastery</span>
-          </p>
+          <img 
+            src={logo} 
+            alt='logo' 
+            className='w-14 h-14 object-contain' 
+          />
+          <div className="flex flex-col">
+            <p className='text-white text-[24px] font-bold cursor-pointer'>
+              Pranav Mishra
+            </p>
+            <p className='text-secondary text-[15px]'>
+              Portfolio
+            </p>
+          </div>
         </Link>
 
         <ul className='list-none hidden sm:flex flex-row gap-10'>
@@ -56,9 +75,9 @@ const Navbar = () => {
               className={`${
                 active === nav.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+              onClick={() => handleClick(nav)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              {nav.title}
             </li>
           ))}
         </ul>
@@ -85,10 +104,10 @@ const Navbar = () => {
                   }`}
                   onClick={() => {
                     setToggle(!toggle);
-                    setActive(nav.title);
+                    handleClick(nav);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  {nav.title}
                 </li>
               ))}
             </ul>

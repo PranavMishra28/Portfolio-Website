@@ -1,63 +1,42 @@
 import React from "react";
-import Tilt from "react-tilt";
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
-import { services } from "../constants";
-import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
-
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
-    >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-      >
-        <img
-          src={icon}
-          alt='web-development'
-          className='w-16 h-16 object-contain'
-        />
-
-        <h3 className='text-white text-[20px] font-bold text-center'>
-          {title}
-        </h3>
-      </div>
-    </motion.div>
-  </Tilt>
-);
+import { SectionWrapper } from "../hoc";
+import picture from "../assets/picture.png";
 
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} className="text-center">
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-      >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
-      </motion.p>
+      <div className="flex flex-col items-center">
+        <motion.div
+          variants={fadeIn("", "", 0.1, 1)}
+          className="mt-4 mb-8 flex justify-center"
+        >
+          <img
+            src={picture}
+            alt="profile"
+            className="w-[400px] h-auto rounded-2xl shadow-lg"
+          />
+        </motion.div>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className='text-secondary text-[17px] max-w-3xl leading-[30px] text-center'
+        >
+          Passionate software developer specializing in AI-driven solutions, full-stack development, and cloud computing. Senior in Computer Science at Penn State University, graduating May 2025.
+          <br />
+          <br />
+          Proficient in Python, JavaScript, React, Node.js, and Solidity, with experience in both frontend and backend development. Skilled in cloud technologies, containerization, and DevOps tools, including AWS, Docker, and Kubernetes. Strong foundation in data-driven systems, blockchain, and cybersecurity.
+          <br />
+          <br />
+          Bringing hands-on experience from internships at Deloitte and SPARC Foundation, where I built scalable applications and optimized system performance. Dedicated to leveraging innovative technology to solve real-world challenges.
+        </motion.p>
       </div>
     </>
   );

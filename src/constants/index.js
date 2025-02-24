@@ -15,14 +15,10 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
+  deloitte,
+  sparc,
+  psu,
 } from "../assets";
 
 export const navLinks = [
@@ -35,27 +31,16 @@ export const navLinks = [
     title: "Work",
   },
   {
+    id: "projects",
+    title: "Projects",
+  },
+  {
+    id: "/resume",
+    title: "Resume",
+  },
+  {
     id: "contact",
     title: "Contact",
-  },
-];
-
-const services = [
-  {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
-    icon: backend,
-  },
-  {
-    title: "Content Creator",
-    icon: creator,
   },
 ];
 
@@ -116,150 +101,140 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Software Development Intern",
+    company_name: "SPARC Foundation",
+    icon: sparc,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Jan 2025 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed cross-platform mobile app using React Native, achieving 40% faster load times and 4.5/5 user rating",
+      "Built 3+ high-fidelity UI prototypes with Figma, improving development workflow efficiency by 20%",
+      "Implemented 5+ PHP features and optimized cross-functional workflows, reducing iteration time by 25%",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Technology and Strategy Consulting Intern",
+    company_name: "Deloitte",
+    icon: deloitte,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "May 2024 - Aug 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Analyzed 10K+ data points using Python and SQL to forecast acquisition outcomes across 3 industries",
+      "Optimized financial analysis with VBA and ETL pipelines, achieving 95% data accuracy and 30% faster processing",
+      "Engineered Power BI dashboards tracking M&A metrics, reducing reporting time by 40% while improving data visibility",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Software Engineering Intern",
+    company_name: "Penn State Nittany AI Advance",
+    icon: psu,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "Aug 2023 - Jan 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed scalable OCR system with Amazon Textract and Vue.js, reducing processing time by 60%",
+      "Led automation initiatives improving accuracy by 40% through iterative Scrum framework refinements",
+      "Implemented ML-based document classification achieving 90% accuracy across 5+ document types",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "Software Engineering Intern",
+    company_name: "Deloitte",
+    icon: deloitte,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "Jun 2022 - Aug 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed and deployed microservices using Docker and CI/CD, enhancing system scalability and reliability",
+      "Integrated AWS Lambda for serverless computing, optimizing resource efficiency and reducing operational overhead",
+      "Built an automated testing suite with 85% coverage, significantly reducing deployment failures",
     ],
-  },
-];
-
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+    name: "React Video Call App",
+    description: "A real-time video communication platform built with WebRTC technology, supporting high-quality video calls with low latency and seamless user authentication.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "firebase",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "webrtc",
         color: "pink-text-gradient",
       },
+      {
+        name: "nodejs",
+        color: "orange-text-gradient",
+      },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/PranavMishra28/React-Video-Call-App",
   },
   {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+    name: "TensorFlow Object Detection",
+    description: "High-performance object detection system leveraging TensorFlow and NVIDIA cuDNN for real-time processing, achieving exceptional accuracy across diverse image datasets.",
+    tags: [
+      {
+        name: "tensorflow",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "opencv",
+        color: "green-text-gradient",
+      },
+      {
+        name: "python",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "cuda",
+        color: "orange-text-gradient",
+      },
+    ],
+    source_code_link: "https://github.com/PranavMishra28/Tensorflow-Object-Detection",
+  },
+  {
+    name: "Decentralized Banking",
+    description: "Innovative decentralized banking platform built on Internet Computer Protocol, enabling secure and efficient financial transactions through smart contracts.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "motoko",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "icp",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/PranavMishra28/DApp-on-ICP-Project",
   },
   {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    name: "5-Stage MIPS CPU",
+    description: "Advanced pipelined 32-bit CPU implementation featuring sophisticated branch prediction and forwarding mechanisms, designed and tested using industry-standard tools.",
     tags: [
       {
-        name: "nextjs",
+        name: "verilog",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "mips",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "fpga",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/PranavMishra28/CMPSC311-C-Projects",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { technologies, experiences, projects };
