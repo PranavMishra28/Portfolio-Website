@@ -1,4 +1,4 @@
-# 3D Portfolio Website
+# Portfolio Website
 
 A modern, interactive portfolio website built with React, Three.js, and Tailwind CSS. Features a stunning 3D interface, smooth animations, and responsive design.
 
