@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react"
+import { track } from '@vercel/analytics'
 import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
 import ResumePage from "./components/ResumePage";
 import Footer from "./components/Footer";
@@ -23,12 +24,18 @@ const MainContent = () => (
 );
 
 const App = () => {
+  const handleButtonClick = () => {
+    track('button_clicked', { buttonName: 'example' })
+  }
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainContent />} />
         <Route path="/resume" element={<ResumePage />} />
       </Routes>
+      <button onClick={handleButtonClick}>Track Click</button>
+      <Analytics />
     </BrowserRouter>
   );
 }
