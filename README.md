@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 3D Portfolio Website
 
 A modern, interactive portfolio website built with React, Three.js, and Tailwind CSS. Features a stunning 3D interface, smooth animations, and responsive design.
@@ -178,6 +177,3 @@ Pranav Mishra
 - Email: mishrapranav82@gmail.com
 - LinkedIn: [linkedin.com/in/pm28](https://linkedin.com/in/pm28)
 - GitHub: [github.com/PranavMishra28](https://github.com/PranavMishra28)
-=======
-
->>>>>>> a8c3c2b10370e053f24aa13e8d1918d2a68c446d
