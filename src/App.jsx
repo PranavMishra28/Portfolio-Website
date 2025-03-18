@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { SpeedInsights } from "@vercel/speed-insights/react"
 import { Analytics } from "@vercel/analytics/react"
 import { track } from '@vercel/analytics'
 import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
