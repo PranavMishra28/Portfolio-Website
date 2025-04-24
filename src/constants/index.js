@@ -107,9 +107,9 @@ const experiences = [
     iconBg: "#383E56",
     date: "Jan 2025 - Present",
     points: [
-      "Developed cross-platform mobile app using React Native, achieving 40% faster load times and 4.5/5 user rating",
-      "Built 3+ high-fidelity UI prototypes with Figma, improving development workflow efficiency by 20%",
-      "Implemented 5+ PHP features and optimized cross-functional workflows, reducing iteration time by 25%",
+      "Built a MERN stack app with React Native and AWS for skill development at Penn State",
+      "Crafted 4+ RESTful APIs with Node.js and MongoDB, boosting performance by 20%",
+      "Enhanced AWS deployment with analytics, lifting engagement by 30%",
     ],
   },
   {
